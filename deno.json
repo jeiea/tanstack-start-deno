@@ -2,8 +2,9 @@
   "lock": true,
   "tasks": {
     "check": {
-      "dependencies": ["check:lint", "check:types"]
+      "dependencies": ["check:format", "check:lint", "check:types"]
     },
+    "check:format": "deno fmt --check",
     "check:lint": "deno lint",
     "check:types": "deno check",
     "prepare": "deno run -A npm:@pandacss/dev codegen",

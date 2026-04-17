@@ -12,7 +12,8 @@ export const displayTitleClass = css({
 export const islandShellClass = css({
   borderWidth: "1px",
   borderColor: "line",
-  background: "linear-gradient(165deg, token(colors.surfaceStrong), token(colors.surface))",
+  background:
+    "linear-gradient(165deg, token(colors.surfaceStrong), token(colors.surface))",
   boxShadow: "island",
   backdropFilter: "blur(4px)",
 });
@@ -75,7 +76,7 @@ const navLinkBaseClass = css({
   transitionProperty: "color",
   transitionDuration: "170ms",
   "&::after": {
-    content: "\"\"",
+    content: '""',
     position: "absolute",
     left: 0,
     bottom: "-6px",

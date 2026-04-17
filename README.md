@@ -25,9 +25,9 @@ This project uses [Panda CSS](https://panda-css.com/) for styling.
   to `setupRouterSsrQueryIntegration(...)`
 - `src/routes/__root.tsx` types the router context and relies on that
   integration to provide `QueryClientProvider`
-- `src/routes/demo.tanstack-query.tsx` shows the pattern used here:
-  `loader` prefetch with `context.queryClient.ensureQueryData(...)`, then read
-  the same query with `createQuery(...)`
+- `src/routes/demo.tanstack-query.tsx` shows the pattern used here: `loader`
+  prefetch with `context.queryClient.ensureQueryData(...)`, then read the same
+  query with `createQuery(...)`
 
 ## T3Env
 
@@ -70,7 +70,7 @@ import { Link } from "@tanstack/solid-router";
 Then anywhere in your JSX you can use it like so:
 
 ```tsx
-<Link to="/about">About</Link>
+<Link to="/about">About</Link>;
 ```
 
 This will create a link that will navigate to the `/about` route.

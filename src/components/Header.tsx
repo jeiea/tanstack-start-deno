@@ -102,7 +102,11 @@ export default function Header() {
         </div>
 
         <div class={navLinksClass}>
-          <Link to="/" class={navLinkClass} activeProps={{ class: `${navLinkClass} is-active` }}>
+          <Link
+            to="/"
+            class={navLinkClass}
+            activeProps={{ class: `${navLinkClass} is-active` }}
+          >
             Home
           </Link>
           <Link

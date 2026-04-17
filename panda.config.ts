@@ -1,4 +1,8 @@
-import { defineConfig, defineGlobalStyles, defineKeyframes } from "@pandacss/dev";
+import {
+  defineConfig,
+  defineGlobalStyles,
+  defineKeyframes,
+} from "@pandacss/dev";
 
 export default defineConfig({
   preflight: true,
@@ -29,8 +33,8 @@ export default defineConfig({
           heroB: { value: "rgba(47, 106, 74, 0.2)" },
         },
         fonts: {
-          body: { value: "\"Manrope\", ui-sans-serif, system-ui, sans-serif" },
-          display: { value: "\"Fraunces\", Georgia, serif" },
+          body: { value: '"Manrope", ui-sans-serif, system-ui, sans-serif' },
+          display: { value: '"Fraunces", Georgia, serif' },
         },
         shadows: {
           island: {

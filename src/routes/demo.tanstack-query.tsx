@@ -54,9 +54,7 @@ function App() {
       <section class={`${islandShellClass} ${cardClass}`}>
         <h1 class={headingClass}>People list from TanStack Query cache</h1>
         <ul class={listClass}>
-          {peopleQuery.data?.map((person) => (
-            <li>{person.name}</li>
-          ))}
+          {peopleQuery.data?.map((person) => <li>{person.name}</li>)}
         </ul>
       </section>
     </main>
