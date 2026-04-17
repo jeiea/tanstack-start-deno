@@ -12,8 +12,7 @@ export const displayTitleClass = css({
 export const islandShellClass = css({
   borderWidth: "1px",
   borderColor: "line",
-  background:
-    "linear-gradient(165deg, token(colors.surfaceStrong), token(colors.surface))",
+  background: "linear-gradient(165deg, token(colors.surfaceStrong), token(colors.surface))",
   boxShadow: "island",
   backdropFilter: "blur(4px)",
 });

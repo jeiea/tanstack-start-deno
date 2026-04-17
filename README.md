@@ -21,13 +21,10 @@ This project uses [Panda CSS](https://panda-css.com/) for styling.
 
 ## TanStack Query SSR
 
-- `src/router.tsx` creates a fresh `QueryClient` in `getRouter()` and wires it
-  to `setupRouterSsrQueryIntegration(...)`
-- `src/routes/__root.tsx` types the router context and relies on that
-  integration to provide `QueryClientProvider`
-- `src/routes/demo.tanstack-query.tsx` shows the pattern used here: `loader`
-  prefetch with `context.queryClient.ensureQueryData(...)`, then read the same
-  query with `createQuery(...)`
+- `src/router.tsx` creates a fresh `QueryClient` in `getRouter()` and wires it to `setupRouterSsrQueryIntegration(...)`
+- `src/routes/__root.tsx` types the router context and relies on that integration to provide `QueryClientProvider`
+- `src/routes/demo.tanstack-query.tsx` shows the pattern used here: `loader` prefetch with
+  `context.queryClient.ensureQueryData(...)`, then read the same query with `createQuery(...)`
 
 ## T3Env
 
@@ -45,23 +42,21 @@ console.log(env.VITE_APP_TITLE);
 
 ## Routing
 
-This project uses [TanStack Router](https://tanstack.com/router) with file-based
-routing. Routes are managed as files in `src/routes`.
+This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in
+`src/routes`.
 
 ### Adding A Route
 
-To add a new route to your application just add a new file in the `./src/routes`
-directory.
+To add a new route to your application just add a new file in the `./src/routes` directory.
 
 TanStack will automatically generate the content of the route file for you.
 
-Now that you have two routes you can use a `Link` component to navigate between
-them.
+Now that you have two routes you can use a `Link` component to navigate between them.
 
 ### Adding Links
 
-To use SPA (Single Page Application) navigation you will need to import the
-`Link` component from `@tanstack/solid-router`.
+To use SPA (Single Page Application) navigation you will need to import the `Link` component from
+`@tanstack/solid-router`.
 
 ```tsx
 import { Link } from "@tanstack/solid-router";
@@ -80,17 +75,16 @@ More information on the `Link` component can be found in the
 
 ### Using A Layout
 
-In the File Based Routing setup the layout is located in
-`src/routes/__root.tsx`. Anything you add to the root route will appear in all
-the routes.
+In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route
+will appear in all the routes.
 
 More information on layouts can be found in the
 [Layouts documentation](https://tanstack.com/router/latest/docs/framework/solid/guide/routing-concepts#layouts).
 
 ## Server Functions
 
-TanStack Start provides server functions that allow you to write server-side
-code that seamlessly integrates with your client components.
+TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your
+client components.
 
 ```tsx
 import { createServerFn } from "@tanstack/solid-start";
@@ -104,10 +98,9 @@ const getServerTime = createServerFn({
 
 ## Data Fetching
 
-There are multiple ways to fetch data in your application. You can use TanStack
-Query to fetch data from a server. But you can also use the `loader`
-functionality built into TanStack Router to load the data for a route before
-it's rendered.
+There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But
+you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's
+rendered.
 
 For example:
 
@@ -132,19 +125,16 @@ function PeopleComponent() {
 }
 ```
 
-Loaders simplify your data fetching logic dramatically. Check out more
-information in the
+Loaders simplify your data fetching logic dramatically. Check out more information in the
 [Loader documentation](https://tanstack.com/router/latest/docs/framework/solid/guide/data-loading#loader-parameters).
 
 # Demo files
 
-Files prefixed with `demo` can be safely deleted. They are there to provide a
-starting point for you to play around with the features you've installed.
+Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with
+the features you've installed.
 
 # Learn More
 
-You can learn more about all of the offerings from TanStack in the
-[TanStack documentation](https://tanstack.com).
+You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
 
-For TanStack Start specific documentation, visit
-[TanStack Start](https://tanstack.com/start).
+For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).

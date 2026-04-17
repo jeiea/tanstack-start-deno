@@ -1,5 +1,6 @@
 {
   "lock": true,
+  "nodeModulesDir": "auto",
   "tasks": {
     "hooks:install": "deno run --allow-read=deno.json,.git/hooks/ --allow-write=.git/hooks/ jsr:@hongminhee/deno-task-hooks",
     "hooks:pre-commit": "deno task ci",
@@ -21,6 +22,11 @@
     },
     "start": "deno run -A .output/server/index.mjs",
     "preview": "deno run -A npm:vite preview --host 127.0.0.1 --port 4173"
+  },
+  "fmt": {
+    "options": {
+      "lineWidth": 120
+    }
   },
   "exclude": [
     "node_modules/",
@@ -65,6 +71,5 @@
     "vite": "npm:vite@^7.3.1",
     "vite-plugin-solid": "npm:vite-plugin-solid@^2.11.10",
     "zod": "npm:zod@^4.3.6"
-  },
-  "nodeModulesDir": "auto"
+  }
 }

@@ -155,8 +155,7 @@ function App() {
           style={{
             left: "-5rem",
             top: "-6rem",
-            background:
-              "radial-gradient(circle, rgba(79, 184, 178, 0.32), transparent 66%)",
+            background: "radial-gradient(circle, rgba(79, 184, 178, 0.32), transparent 66%)",
           }}
         />
         <div
@@ -164,8 +163,7 @@ function App() {
           style={{
             right: "-5rem",
             bottom: "-5rem",
-            background:
-              "radial-gradient(circle, rgba(47, 106, 74, 0.18), transparent 66%)",
+            background: "radial-gradient(circle, rgba(47, 106, 74, 0.18), transparent 66%)",
           }}
         />
         <p class={islandKickerClass} style={{ "margin-bottom": "0.75rem" }}>
@@ -175,8 +173,8 @@ function App() {
           Start simple, ship quickly.
         </h1>
         <p class={leadClass}>
-          This base starter intentionally keeps things light: two routes, clean
-          structure, and the essentials you need to build from scratch.
+          This base starter intentionally keeps things light: two routes, clean structure, and the essentials you need
+          to build from scratch.
         </p>
         <div class={actionRowClass}>
           <a href="/about" class={primaryActionClass}>
@@ -231,12 +229,10 @@ function App() {
             Edit <code>src/routes/index.tsx</code> to customize the home page.
           </li>
           <li>
-            Update <code>src/components/Header.tsx</code>{" "}
-            for navigation and product links.
+            Update <code>src/components/Header.tsx</code> for navigation and product links.
           </li>
           <li>
-            Add routes in <code>src/routes</code>{" "}
-            and tweak Panda-backed visual tokens in <code>panda.config.ts</code>
+            Add routes in <code>src/routes</code> and tweak Panda-backed visual tokens in <code>panda.config.ts</code>
             {" "}
             and shared classes in <code>src/styles/panda.ts</code>.
           </li>

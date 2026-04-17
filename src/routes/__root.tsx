@@ -1,9 +1,4 @@
-import {
-  createRootRouteWithContext,
-  HeadContent,
-  Outlet,
-  Scripts,
-} from "@tanstack/solid-router";
+import { createRootRouteWithContext, HeadContent, Outlet, Scripts } from "@tanstack/solid-router";
 import { TanStackRouterDevtools } from "@tanstack/solid-router-devtools";
 import { HydrationScript } from "solid-js/web";
 import { Suspense } from "solid-js";

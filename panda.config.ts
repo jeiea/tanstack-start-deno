@@ -1,8 +1,4 @@
-import {
-  defineConfig,
-  defineGlobalStyles,
-  defineKeyframes,
-} from "@pandacss/dev";
+import { defineConfig, defineGlobalStyles, defineKeyframes } from "@pandacss/dev";
 
 export default defineConfig({
   preflight: true,
