@@ -1,6 +1,8 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/assert@^1.0.19": "1.0.19",
+    "jsr:@std/internal@^1.0.12": "1.0.12",
     "npm:@pandacss/dev@*": "1.9.1_typescript@5.9.3",
     "npm:@pandacss/dev@^1.9.1": "1.9.1_typescript@5.9.3",
     "npm:@sentry/solid@^10.42.0": "10.49.0_@tanstack+solid-router@1.168.20__solid-js@1.9.12_solid-js@1.9.12",
@@ -19,6 +21,17 @@
     "npm:vite@*": "7.3.2",
     "npm:vite@^7.3.1": "7.3.2",
     "npm:zod@^4.3.6": "4.3.6"
+  },
+  "jsr": {
+    "@std/assert@1.0.19": {
+      "integrity": "eaada96ee120cb980bc47e040f82814d786fe8162ecc53c91d8df60b8755991e",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.12": {
+      "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
+    }
   },
   "npm": {
     "@babel/code-frame@7.27.1": {
@@ -3243,6 +3256,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/assert@^1.0.19",
       "npm:@pandacss/dev@^1.9.1",
       "npm:@sentry/solid@^10.42.0",
       "npm:@t3-oss/env-core@~0.13.10",
