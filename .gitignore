@@ -11,6 +11,5 @@ dist-ssr
 .vinxi
 styled-system
 __unconfig*
-deno.lock
 
 /.vite/
