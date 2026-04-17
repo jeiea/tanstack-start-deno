@@ -1,0 +1,59 @@
+{
+  "lock": true,
+  "tasks": {
+    "check": {
+      "dependencies": ["check:lint", "check:types"]
+    },
+    "check:lint": "deno lint",
+    "check:types": "deno check",
+    "prepare": "deno run -A npm:@pandacss/dev codegen",
+    "dev": "deno run -A -- npm:vite dev --port 3000",
+    "build": "deno run -A npm:vite build",
+    "start": "deno run -A .output/server/index.mjs",
+    "preview": "deno run -A npm:vite preview --host 127.0.0.1 --port 4173"
+  },
+  "exclude": [
+    "node_modules/",
+    "dist/",
+    ".vite/",
+    ".output/",
+    ".tanstack/",
+    "styled-system/"
+  ],
+  "lint": {
+    "rules": {
+      "exclude": ["jsx-key"]
+    },
+    "exclude": [
+      "src/routeTree.gen.ts"
+    ]
+  },
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "lib": ["deno.window", "DOM", "DOM.Iterable"],
+    "noUncheckedIndexedAccess": true,
+    "useUnknownInCatchVariables": true
+  },
+  "imports": {
+    "@pandacss/dev": "npm:@pandacss/dev@^1.9.1",
+    "@sentry/solid": "npm:@sentry/solid@^10.42.0",
+    "@t3-oss/env-core": "npm:@t3-oss/env-core@^0.13.10",
+    "@tanstack/devtools-vite": "npm:@tanstack/devtools-vite",
+    "@tanstack/router-plugin": "npm:@tanstack/router-plugin@^1.133.21",
+    "@tanstack/solid-query": "npm:@tanstack/solid-query",
+    "@tanstack/solid-query-devtools": "npm:@tanstack/solid-query-devtools",
+    "@tanstack/solid-router": "npm:@tanstack/solid-router",
+    "@tanstack/solid-router-devtools": "npm:@tanstack/solid-router-devtools",
+    "@tanstack/solid-router-ssr-query": "npm:@tanstack/solid-router-ssr-query",
+    "@tanstack/solid-start": "npm:@tanstack/solid-start",
+    "@tanstack/solid-start/plugin/vite": "npm:@tanstack/solid-start/plugin/vite",
+    "nitro/vite": "npm:nitro@3.0.260415-beta/vite",
+    "solid-js": "npm:solid-js@^1.9.11",
+    "solid-js/web": "npm:solid-js@^1.9.11/web",
+    "vite": "npm:vite@^7.3.1",
+    "vite-plugin-solid": "npm:vite-plugin-solid@^2.11.10",
+    "zod": "npm:zod@^4.3.6"
+  },
+  "nodeModulesDir": "auto"
+}

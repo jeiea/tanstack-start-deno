@@ -1,0 +1,19 @@
+{
+  "projectName": "bsr-memory",
+  "mode": "file-router",
+  "typescript": true,
+  "packageManager": "pnpm",
+  "includeExamples": true,
+  "tailwind": true,
+  "addOnOptions": {},
+  "envVarValues": {},
+  "git": true,
+  "routerOnly": false,
+  "version": 1,
+  "framework": "solid",
+  "chosenAddOns": [
+    "t3env",
+    "tanstack-query",
+    "sentry"
+  ]
+}
