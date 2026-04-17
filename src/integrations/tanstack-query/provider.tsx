@@ -1,8 +1,12 @@
-import { QueryClient } from '@tanstack/solid-query'
+import { QueryClient } from "@tanstack/solid-query";
 
-export function getContext() {
-  const queryClient = new QueryClient()
+export interface RouterContext {
+  queryClient: QueryClient;
+}
+
+export function getContext(): RouterContext {
+  const queryClient = new QueryClient();
   return {
     queryClient,
-  }
+  };
 }

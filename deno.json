@@ -7,8 +7,14 @@
     "check:lint": "deno lint",
     "check:types": "deno check",
     "prepare": "deno run -A npm:@pandacss/dev codegen",
-    "dev": "deno run -A -- npm:vite dev --port 3000",
-    "build": "deno run -A npm:vite build",
+    "dev": {
+      "dependencies": ["prepare"],
+      "command": "deno run -A -- npm:vite dev --port 3000"
+    },
+    "build": {
+      "dependencies": ["prepare"],
+      "command": "deno run -A npm:vite build"
+    },
     "start": "deno run -A .output/server/index.mjs",
     "preview": "deno run -A npm:vite preview --host 127.0.0.1 --port 4173"
   },

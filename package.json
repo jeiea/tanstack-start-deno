@@ -1,12 +1,5 @@
 {
   "name": "tanstack-start-poc",
   "private": true,
-  "type": "module",
-  "scripts": {
-    "prepare": "deno task prepare",
-    "dev": "deno task dev",
-    "build": "deno task build",
-    "start": "node .output/server/index.mjs",
-    "preview": "deno task preview"
-  }
+  "type": "module"
 }

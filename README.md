@@ -19,13 +19,15 @@ deno task start
 
 This project uses [Panda CSS](https://panda-css.com/) for styling.
 
-### Panda workflow
+## TanStack Query SSR
 
-1. Run `deno task prepare` to generate `styled-system/`
-2. Import helpers from `../styled-system/css` or `../../styled-system/css`
-3. Keep the Panda layer entry in `src/styles.css`
-4. Adjust global tokens/styles in `panda.config.ts` and shared classes in
-   `src/styles/panda.ts`
+- `src/router.tsx` creates a fresh `QueryClient` in `getRouter()` and wires it
+  to `setupRouterSsrQueryIntegration(...)`
+- `src/routes/__root.tsx` types the router context and relies on that
+  integration to provide `QueryClientProvider`
+- `src/routes/demo.tanstack-query.tsx` shows the pattern used here:
+  `loader` prefetch with `context.queryClient.ensureQueryData(...)`, then read
+  the same query with `createQuery(...)`
 
 ## T3Env
 

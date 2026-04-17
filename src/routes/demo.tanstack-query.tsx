@@ -1,4 +1,4 @@
-import { createQuery } from "@tanstack/solid-query";
+import { createQuery, queryOptions } from "@tanstack/solid-query";
 import { createFileRoute } from "@tanstack/solid-router";
 
 import { css } from "../../styled-system/css/index.mjs";
@@ -30,28 +30,35 @@ const listClass = css({
   },
 });
 
+async function fetchPeople() {
+  return await Promise.resolve([{ name: "John Doe" }, { name: "Jane Doe" }]);
+}
+
+const peopleQueryOptions = queryOptions({
+  queryKey: ["people"],
+  queryFn: fetchPeople,
+});
+
 export const Route = createFileRoute("/demo/tanstack-query")({
+  loader: async ({ context }) => {
+    await context.queryClient.ensureQueryData(peopleQueryOptions);
+  },
   component: App,
 });
 
 function App() {
-  const peopleQuery = createQuery(() => ({
-    queryKey: ["people"],
-    queryFn: () =>
-      Promise.resolve([{ name: "John Doe" }, { name: "Jane Doe" }]),
-    initialData: [],
-  }));
+  const peopleQuery = createQuery(() => peopleQueryOptions);
 
   return (
     <main class={`${pageWrapClass} ${pageClass}`}>
       <section class={`${islandShellClass} ${cardClass}`}>
-        <h1 class={headingClass}>People list from Swapi</h1>
+        <h1 class={headingClass}>People list from TanStack Query cache</h1>
         <ul class={listClass}>
-          {peopleQuery.data?.map((person) => <li>{person.name}</li>)}
+          {peopleQuery.data?.map((person) => (
+            <li>{person.name}</li>
+          ))}
         </ul>
       </section>
     </main>
   );
 }
-
-export default App;
