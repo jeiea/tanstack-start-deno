@@ -10,7 +10,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
   head: () => ({
     links: [{ rel: "stylesheet", href: styleCss }],
   }),
-  shellComponent: RootComponent,
+  component: RootComponent,
 });
 
 function RootComponent() {
