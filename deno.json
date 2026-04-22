@@ -12,9 +12,10 @@
     "check:lint": "deno lint",
     "check:types": "deno check",
     "test": {
-      "dependencies": ["test:unit", "test:ssr"]
+      "dependencies": ["test:unit", "test:ui", "test:ssr"]
     },
     "test:unit": "deno test",
+    "test:ui": "deno run -A npm:vitest run",
     "test:ssr": "deno test -A src/routes/-index.ssr-smoke.ts",
     "prepare": "deno run -A npm:@pandacss/dev codegen",
     "dev": {

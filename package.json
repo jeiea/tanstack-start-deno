@@ -3,6 +3,28 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@sentry/solid": "^10.42.0",
+    "@t3-oss/env-core": "^0.13.10",
+    "@tanstack/solid-query": "^5.99.0",
+    "@tanstack/solid-query-devtools": "^5.99.0",
+    "@tanstack/solid-router": "^1.168.20",
+    "@tanstack/solid-router-devtools": "^1.166.13",
+    "@tanstack/solid-router-ssr-query": "^1.166.11",
+    "@tanstack/solid-start": "^1.167.37",
+    "nitro": "3.0.260415-beta",
+    "solid-js": "^1.9.11",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^1.9.1",
+    "@solidjs/testing-library": "^0.8.10",
+    "@tanstack/devtools-vite": "^0.6.0",
+    "@tanstack/router-plugin": "^1.133.21",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "jsdom": "^29.0.2",
+    "vite": "^7.3.1",
+    "vite-plugin-solid": "^2.11.10",
     "vitest": "^4.1.5"
   }
 }
