@@ -173,8 +173,8 @@ function App() {
           Start simple, ship quickly.
         </h1>
         <p class={leadClass}>
-          This base starter intentionally keeps things light: two routes, clean structure, and the essentials you need
-          to build from scratch.
+          This base starter intentionally keeps things light: two routes, clean structure, and the
+          essentials you need to build from scratch.
         </p>
         <div class={actionRowClass}>
           <a href="/about" class={primaryActionClass}>
@@ -232,9 +232,8 @@ function App() {
             Update <code>src/components/Header.tsx</code> for navigation and product links.
           </li>
           <li>
-            Add routes in <code>src/routes</code> and tweak Panda-backed visual tokens in <code>panda.config.ts</code>
-            {" "}
-            and shared classes in <code>src/styles/panda.ts</code>.
+            Add routes in <code>src/routes</code> and tweak Panda-backed visual tokens in{" "}
+            <code>panda.config.ts</code> and shared classes in <code>src/styles/panda.ts</code>.
           </li>
         </ul>
       </section>

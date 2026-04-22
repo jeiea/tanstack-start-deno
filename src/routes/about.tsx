@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/solid-router";
 
 import { css } from "../../styled-system/css/index.mjs";
-import { displayTitleClass, islandKickerClass, islandShellClass, pageWrapClass } from "../styles/panda.ts";
+import {
+  displayTitleClass,
+  islandKickerClass,
+  islandShellClass,
+  pageWrapClass,
+} from "../styles/panda.ts";
 
 const pageClass = css({
   paddingInline: "1rem",
@@ -43,8 +48,8 @@ function About() {
           A small starter with room to grow.
         </h1>
         <p class={bodyClass}>
-          TanStack Start gives you type-safe routing, server functions, and modern SSR defaults. Use this as a clean
-          foundation, then layer in your own routes, styling, and add-ons.
+          TanStack Start gives you type-safe routing, server functions, and modern SSR defaults. Use
+          this as a clean foundation, then layer in your own routes, styling, and add-ons.
         </p>
       </section>
     </main>

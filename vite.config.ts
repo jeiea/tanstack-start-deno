@@ -55,7 +55,9 @@ export default defineConfig({
       name: "deno-solid-ssr-fix",
       configEnvironment(name, config) {
         if (name === "ssr") {
-          const noExternal = Array.isArray(config.resolve?.noExternal) ? config.resolve!.noExternal : [];
+          const noExternal = Array.isArray(config.resolve?.noExternal)
+            ? config.resolve!.noExternal
+            : [];
           noExternal.push(
             /^@tanstack\/solid-router/,
             /^@tanstack\/solid-query/,

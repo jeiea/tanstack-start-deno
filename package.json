@@ -1,5 +1,8 @@
 {
   "name": "tanstack-start-poc",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "vitest": "^4.1.5"
+  }
 }

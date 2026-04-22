@@ -1,16 +1,21 @@
 {
   "lock": true,
-  "nodeModulesDir": "auto",
   "tasks": {
     "hooks:install": "deno run --allow-read=deno.json,.git/hooks/ --allow-write=.git/hooks/ jsr:@hongminhee/deno-task-hooks",
-    "hooks:pre-commit": "deno task ci",
-    "ci": {
-      "dependencies": ["fmt", "lint", "check", "test"]
+    "hooks:pre-commit": {
+      "dependencies": ["check"]
     },
-    "fmt": "deno fmt --check",
-    "lint": "deno lint",
-    "check": "deno check",
-    "test": "deno test --allow-all",
+    "check": {
+      "dependencies": ["check:fmt", "check:lint", "check:types", "test"]
+    },
+    "check:fmt": "deno fmt --check",
+    "check:lint": "deno lint",
+    "check:types": "deno check",
+    "test": {
+      "dependencies": ["test:unit", "test:ssr"]
+    },
+    "test:unit": "deno test",
+    "test:ssr": "deno test -A src/routes/-index.ssr-smoke.ts",
     "prepare": "deno run -A npm:@pandacss/dev codegen",
     "dev": {
       "dependencies": ["prepare"],
@@ -24,9 +29,7 @@
     "preview": "deno run -A npm:vite preview --host 127.0.0.1 --port 4173"
   },
   "fmt": {
-    "options": {
-      "lineWidth": 120
-    }
+    "lineWidth": 100
   },
   "exclude": [
     "node_modules/",
@@ -34,6 +37,7 @@
     ".vite/",
     ".output/",
     ".tanstack/",
+    "src/routeTree.gen.ts",
     "styled-system/"
   ],
   "lint": {
